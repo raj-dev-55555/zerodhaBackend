@@ -21,7 +21,11 @@ const PORT = process.env.PORT || 8080;  // iska mtlb ye hai  yadi .env me koe po
 const uri = process.env.MONGO_URL
 
 app.use(cors({
-  origin: ["http://localhost:3001","http://localhost:3000"],
+  origin: [
+    "http://localhost:3001", 
+    "http://localhost:3000",
+    "https://zerodhafrontend-cg69.onrender.com"
+  ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
