@@ -24,11 +24,14 @@ app.use(cors({
   origin: [
     "http://localhost:3001", 
     "http://localhost:3000",
-    "https://zerodhafrontend-cg69.onrender.com"
+    "https://zerodhafrontend-cg69.onrender.com",
+    "https://zerodhadashboard-6p87.onrender.com"  // 👈 ye add karo
   ],
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
+
+
 app.use(bodyParser.json())
 app.use(cookieParser());
 app.use("/", authRoute);
