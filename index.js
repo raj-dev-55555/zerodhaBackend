@@ -34,7 +34,7 @@ app.use(cors({
 
 app.use(bodyParser.json())
 app.use(cookieParser());
-app.use("/", authRoute);
+app.use("/api/auth", authRoute);
 
 // app.get("/addHoldings",(req,res)=>{
 //     let temHoldings =  [
