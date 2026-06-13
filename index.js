@@ -1,5 +1,5 @@
 require("dotenv").config();
-console.log(process.env)
+// console.log(process.env)
 console.log("TOKEN_KEY:", process.env.TOKEN_KEY);
 console.log("TOKEN_KEY:", process.env.MONGO_URL);
 const express = require("express");
