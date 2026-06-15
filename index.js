@@ -8,6 +8,7 @@ const mongoose = require("mongoose");
 const { HoldingsModel } = require("./model/HoldingsModel");
 const { PositionsModel } = require("./model/PositionsModel");
 const { OrderModel } = require("./model/OrderModel");
+const { SellModel } = require("./model/SellModel");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
@@ -236,6 +237,17 @@ app.post("/newOrder", async (req, res) => {
     console.log("data saved")
 });
 
+app.post("/sellOrder", async (req, res) => {
+    let newOrder = new SellModel({
+        name: req.body.name,
+        qty: req.body.qty,
+        price: req.body.price,
+        mode: req.body.mode
+    })
+    await newOrder.save();
+    res.json('add hoa')
+    console.log("data saved")
+});
 
 
 app.get("/", (req, res) => {
