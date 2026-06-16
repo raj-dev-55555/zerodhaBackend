@@ -228,6 +228,7 @@ app.get("/allOrders", async (req, res) => {
 
 app.get("/SellOrders", async (req, res) => {
     let SellOrders = await SellModel.find({});
+    console.log("Yha dekho " + SellOrders)
     res.json(SellOrders);
 })
 app.post("/newOrder", async (req, res) => {
